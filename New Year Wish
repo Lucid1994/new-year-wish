@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>New Year Wish for My Love</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet"/>
+
+<style>
+  body {
+    background: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .card {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 25px rgba(255,0,0,0.15);
+    max-width: 650px;
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  h1 {
+    font-size: 2.7rem;
+    font-weight: 600;
+    color: red;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: red;
+    line-height: 1.6;
+  }
+
+  .footer {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: red;
+  }
+
+  .names {
+    margin-top: 20px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: red;
+  }
+
+  .heart-main {
+    font-size: 3.2rem;
+    color: red;
+    animation: beat 1.2s infinite;
+  }
+
+  @keyframes beat {
+    0% { transform: scale(1); }
+    30% { transform: scale(1.3); }
+    60% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+  }
+
+  /* Floating Hearts */
+  .heart {
+    position: absolute;
+    color: red;
+    font-size: 2rem;
+    animation: floatUp 5s linear infinite;
+    opacity: 0.7;
+  }
+
+  @keyframes floatUp {
+    0% { transform: translateY(100vh) scale(0.5); opacity: 1; }
+    100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+  }
+
+  /* Fireworks */
+  .firework {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    animation: explode 1.5s ease-out infinite;
+  }
+
+  @keyframes explode {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(80); opacity: 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Background Music -->
+<audio autoplay loop>
+  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_59b6c0fdd3.mp3?filename=romantic-melody-2-11645.mp3" type="audio/mp3">
+</audio>
+
+<!-- Floating Hearts Elements -->
+<script>
+  function createHearts() {
+    for (let i = 0; i < 20; i++) {
+      let heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = Math.random() * 3 + 4 + "s";
+      document.body.appendChild(heart);
+    }
+  }
+  createHearts();
+</script>
+
+
+<!-- Fireworks Elements -->
+<script>
+  function createFireworks() {
+    for (let i = 0; i < 8; i++) {
+      let fw = document.createElement("div");
+      fw.classList.add("firework");
+      fw.style.left = Math.random() * 100 + "vw";
+      fw.style.top = Math.random() * 50 + "vh";
+      document.body.appendChild(fw);
+    }
+  }
+  setInterval(createFireworks, 700);
+</script>
+
+
+<div class="card">
+  <div class="heart-main">❤️</div>
+  <h1>Happy New Year, My Love</h1>
+  <p>
+    I love you baby, like this year has passed,<br/>
+    I want to spend the rest of my life with you 💗
+  </p>
+
+
+  <div class="footer">Forever Yours 💞</div>
+
+
+  <div class="names">
+    <strong>Inshiya</strong> + <strong>Inshiya</strong>
+  </div>
+</div>
+
+</body>
+</html>
